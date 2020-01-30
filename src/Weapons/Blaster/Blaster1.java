@@ -1,0 +1,13 @@
+package Weapons.Blaster;
+
+import Bullet.Bullet;
+import Bullet.Bullets;
+
+public class Blaster1 extends Blaster {
+
+	@Override
+	public void add(Bullets bullets) {
+		bullets.add(new Bullet(blasterImage, x - getWidth()/2, y, speed, Math.toRadians(-90), minPower,getId()));
+		bullets.add(new Bullet(blasterImage, x + getWidth()/2, y, speed, Math.toRadians(-90), minPower,getId()));
+	}
+}
