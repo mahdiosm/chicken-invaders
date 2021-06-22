@@ -59,7 +59,7 @@ public class MainFrame extends JFrame {
 	private void connectToDataBase() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			IO.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/", "root", "mahdi1379@osm");
+			IO.connection = DriverManager.getConnection("jdbc:mysql:your ip", "your usename", "your pass");
 			IO.connection.setAutoCommit(false);
 			IO.statement = IO.connection.createStatement();
 			IO.statement.executeUpdate("CREATE DATABASE IF NOT EXISTS CHICKEN_INVADERS");
